@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OfflineFlipperFragment"
+    android:background="@drawable/background2">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/constraintlayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        android:src="@drawable/fruit_box" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintEnd_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        android:background="@drawable/bg_red"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:id="@+id/constraintlayout2">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:weightSum="4">
+
+
+                <LinearLayout
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ViewFlipper
+                        android:id="@+id/viewflipper00"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".20" />
+
+                    <ViewFlipper
+                        android:id="@+id/viewflipper01"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".20"/>
+
+                    <ViewFlipper
+                        android:id="@+id/viewflipper02"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".20" />
+
+                    <ViewFlipper
+                        android:id="@+id/viewflipper03"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".20" />
+
+                    <ViewFlipper
+                        android:id="@+id/viewflipper04"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".20" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ViewFlipper
+                        android:id="@+id/viewflipper10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".20" />
+
+                    <ViewFlipper
+                        android:id="@+id/viewflipper11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".20"/>
+
+                    <ViewFlipper
+                        android:id="@+id/viewflipper12"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".20" />
+
+                    <ViewFlipper
+                        android:id="@+id/viewflipper13"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".20" />
+
+                    <ViewFlipper
+                        android:id="@+id/viewflipper14"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".20" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ViewFlipper
+                        android:id="@+id/viewflipper20"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".20" />
+
+                    <ViewFlipper
+                        android:id="@+id/viewflipper21"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".20"/>
+
+                    <ViewFlipper
+                        android:id="@+id/viewflipper22"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".20" />
+
+                    <ViewFlipper
+                        android:id="@+id/viewflipper23"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".20" />
+
+                    <ViewFlipper
+                        android:id="@+id/viewflipper24"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".20" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ViewFlipper
+                        android:id="@+id/viewflipper30"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".20" />
+
+                    <ViewFlipper
+                        android:id="@+id/viewflipper31"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".20"/>
+
+                    <ViewFlipper
+                        android:id="@+id/viewflipper32"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".20" />
+
+                    <ViewFlipper
+                        android:id="@+id/viewflipper33"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".20" />
+
+                    <ViewFlipper
+                        android:id="@+id/viewflipper34"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".20" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/constraintlayout2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline4"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        app:layout_constraintVertical_bias="0.1"
+        android:paddingStart="2dp"
+        android:paddingEnd="2dp">
+
+
+        <ImageView
+            android:id="@+id/spin"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:src="@drawable/spin"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/autoplay"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.7" />
+
+
+        <ImageView
+            android:id="@+id/autoplay"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:src="@drawable/autoplay"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/spin"
+            app:layout_constraintStart_toEndOf="@id/maxbet" />
+
+        <ImageView
+            android:id="@+id/maxbet"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:src="@drawable/maxbet"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/autoplay"
+            app:layout_constraintStart_toEndOf="@+id/guideline5" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/betframe"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:src="@drawable/bonus"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline5"
+            app:layout_constraintStart_toEndOf="@id/bonusframe"  >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/bet"
+                />
+
+            <EditText
+                android:id="@+id/txtbet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:inputType="numberDecimal"
+                android:digits="0123456789.,"
+                android:ellipsize="start"
+                android:gravity="center_horizontal|bottom"
+                android:hint="Enter your bet"
+                android:layout_marginBottom="7dp"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:text="100"
+                android:textColor="#ff6600"
+                android:singleLine="true"
+                android:background="@null"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        <FrameLayout android:id="@+id/bonusframe"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:src="@drawable/bonus"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/betframe"
+            app:layout_constraintStart_toEndOf="@id/freeplayframe" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/bonus"/>
+
+            <TextView
+                android:id="@+id/txtbonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="16dip"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:text="0"
+                android:textColor="#ff6600"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/freeplayframe"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/bonusframe"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/freeplay">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/txtfreeplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="16dip"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:text="10000"
+                android:textColor="#ff6600"/>
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/button_on_off"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/button_on_off" />
+
+    <ImageView
+        android:id="@+id/soundon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/sound_on" />
+
+    <ImageView
+        android:id="@+id/soundoff"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/sound_off"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/button_upload"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/uploads" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
