@@ -34,7 +34,7 @@ public class OfflineFlipperFragment extends Fragment{
     Thread slotThread1, slotThread2, slotThread3, slotThread4, slotThread5;
     Runnable number1, number2, number3, number4, number5, enableButtonsSpinAutoplayBetMaxBet, checkWin;
     boolean startSlot1 = false, startSlot2 = false, startSlot3 = false, startSlot4 = false, startSlot5 = false, finishGame = false, autoplay = false;
-    ImageView btnSpin, btnAutoplay, btnMaxBet, btnUpload, btnSoundOn, btnSoundOff,btnTurnOff;
+    ImageView btnSpin, btnAutoplay, btnMaxBet, btnSoundOn, btnSoundOff,btnTurnOff;
     EditText txtBet;
     TextView txtFreePlay, txtBonus;
     HashMap<String,Integer> bonusCombinations = new HashMap<>();
@@ -55,7 +55,6 @@ public class OfflineFlipperFragment extends Fragment{
         initButtonAutoplayListener();
         initButtonMaxBetListener();
         initButtonTurnOffListener();
-        initButtonUploadListener();
         initButtonSoundOnOffListener();
         slotThread1.start();
         slotThread2.start();
@@ -194,29 +193,44 @@ public class OfflineFlipperFragment extends Fragment{
                     int currentBet = Integer.parseInt(txtBet.getText().toString());
                     int currentBalance = Integer.parseInt(txtFreePlay.getText().toString());
 
-                    int num0 = viewFlipper[0][0].getDisplayedChild();
-                    int num1 = viewFlipper[1][0].getDisplayedChild();
-                    int num2 = viewFlipper[2][0].getDisplayedChild();
-                    int num3 = viewFlipper[3][0].getDisplayedChild();
-                    int num4 = viewFlipper[4][0].getDisplayedChild();
+                    int num00 = viewFlipper[0][0].getDisplayedChild();
+                    int num01 = viewFlipper[1][0].getDisplayedChild();
+                    int num02 = viewFlipper[2][0].getDisplayedChild();
+                    int num03 = viewFlipper[3][0].getDisplayedChild();
+                    int num04 = viewFlipper[4][0].getDisplayedChild();
+                    List<Integer> list1 = Arrays.asList(num00, num01, num02, num03, num04);
 
-                    // To check combination
-//                     num0 = 0;
-//                     num1 = 1;
-//                     num2 = 2;
-//                     num3 = 3;
-//                     num4 = 4;
+                    int num10 = viewFlipper[0][1].getDisplayedChild();
+                    int num11 = viewFlipper[1][1].getDisplayedChild();
+                    int num12 = viewFlipper[2][1].getDisplayedChild();
+                    int num13 = viewFlipper[3][1].getDisplayedChild();
+                    int num14 = viewFlipper[4][1].getDisplayedChild();
+                    List<Integer> list2 = Arrays.asList(num10, num11, num12, num13, num14);
 
-                    String currentCombination = num0 + "" + num1 + num2 + num3 + num4 ;
+                    int num20 = viewFlipper[0][2].getDisplayedChild();
+                    int num21 = viewFlipper[1][2].getDisplayedChild();
+                    int num22 = viewFlipper[2][2].getDisplayedChild();
+                    int num23 = viewFlipper[3][2].getDisplayedChild();
+                    int num24 = viewFlipper[4][2].getDisplayedChild();
+                    List<Integer> list3 = Arrays.asList(num20, num21, num22, num23, num24);
+
+                    int num30 = viewFlipper[0][3].getDisplayedChild();
+                    int num31 = viewFlipper[1][3].getDisplayedChild();
+                    int num32 = viewFlipper[2][3].getDisplayedChild();
+                    int num33 = viewFlipper[3][3].getDisplayedChild();
+                    int num34 = viewFlipper[4][3].getDisplayedChild();
+                    List<Integer> list4 = Arrays.asList(num30, num31, num32, num33, num34);
+
                     int bonus = 0;
-                    Integer multiplier = bonusCombinations.get(currentCombination);
-                    if (multiplier != null) {
+                    bonus = repeatedNumber(list1) >= 2 ?  repeatedNumber(list1) * currentBet : 0;
+                    bonus += repeatedNumber(list2) >= 2 ?  repeatedNumber(list2) * currentBet : 0;
+                    bonus += repeatedNumber(list3) >= 2 ?  repeatedNumber(list3) * currentBet : 0;
+                    bonus += repeatedNumber(list4) >= 2 ?  repeatedNumber(list4) * currentBet : 0;
 
-                        bonus = currentBet * bonusCombinations.get(currentCombination);
+                    if(bonus > 0){
                         currentBalance += bonus;
-
                     }
-                    else {
+                    else{
                         currentBalance -=currentBet;
                         txtFreePlay.setText(currentBalance+"");
 
@@ -236,6 +250,44 @@ public class OfflineFlipperFragment extends Fragment{
                             Toast.makeText(getActivity(),"Bet can't be more than freeplay!", Toast.LENGTH_SHORT).show();
                         }
                     }
+
+
+                    // To check combination another variant
+//                     num0 = 0;
+//                     num1 = 1;
+//                     num2 = 2;
+//                     num3 = 3;
+//                     num4 = 4;
+
+//                    String currentCombination = num0 + "" + num1 + num2 + num3 + num4 ;
+//
+//                    Integer multiplier = bonusCombinations.get(currentCombination);
+//                    if (multiplier != null) {
+//
+//                        bonus = currentBet * bonusCombinations.get(currentCombination);
+//                        currentBalance += bonus;
+//
+//                    }
+//                    else {
+//                        currentBalance -=currentBet;
+//                        txtFreePlay.setText(currentBalance+"");
+//
+//                        if(currentBalance <= 0) {
+//                            try {
+//                                Thread.sleep(1500);
+//                            } catch (InterruptedException e) {
+//                                e.printStackTrace();
+//                            }
+//                            currentBalance = 10000;
+//                            bonus = currentBalance;
+//                            Toast.makeText(getActivity(),"Today is your lucky day! Take bonus 10000!", Toast.LENGTH_SHORT).show();
+//                        }
+//                        if(currentBet > currentBalance){
+//                            currentBet = currentBalance;
+//                            txtBet.setText(currentBet + "");
+//                            Toast.makeText(getActivity(),"Bet can't be more than freeplay!", Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
 
                     txtBonus.setText(bonus + "");
                     txtFreePlay.setText(currentBalance+"");
@@ -477,7 +529,6 @@ public class OfflineFlipperFragment extends Fragment{
         btnSpin = (ImageView) v.findViewById(R.id.spin);
         btnAutoplay = (ImageView) v.findViewById(R.id.autoplay);
         btnMaxBet = (ImageView) v.findViewById(R.id.maxbet);
-        btnUpload = (ImageView) v.findViewById(R.id.button_upload);
         btnSoundOn = (ImageView) v.findViewById(R.id.soundon);
         btnSoundOff = (ImageView) v.findViewById(R.id.soundoff);
         btnTurnOff = (ImageView) v.findViewById(R.id.button_on_off);
@@ -499,19 +550,29 @@ public class OfflineFlipperFragment extends Fragment{
             btnSpin.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startSlot1 = true;
-                    startSlot2 = true;
-                    startSlot3 = true;
-                    startSlot4 = true;
-                    startSlot5 = true;
 
-                    txtBet.setFocusable(false);
-                    txtBet.setFocusableInTouchMode(false);
-                    txtBet.setInputType(TYPE_NULL);
+                    int currentBet = Integer.parseInt(txtBet.getText().toString());
+                    int currentBalance = Integer.parseInt(txtFreePlay.getText().toString());
 
-                    btnAutoplay.setClickable(false);
-                    btnMaxBet.setClickable(false);
-                    btnSpin.setClickable(false);
+                    if(currentBet <= currentBalance){
+                        startSlot1 = true;
+                        startSlot2 = true;
+                        startSlot3 = true;
+                        startSlot4 = true;
+                        startSlot5 = true;
+
+                        txtBet.setFocusable(false);
+                        txtBet.setFocusableInTouchMode(false);
+                        txtBet.setInputType(TYPE_NULL);
+
+                        btnAutoplay.setClickable(false);
+                        btnMaxBet.setClickable(false);
+                        btnSpin.setClickable(false);
+                    }
+                    else {
+                        Toast.makeText(getActivity(),"Bet can't be more than freeplay!", Toast.LENGTH_SHORT).show();
+                    }
+
                 }
             });
         }
@@ -523,16 +584,32 @@ public class OfflineFlipperFragment extends Fragment{
                 @Override
                 public void onClick(View v) {
 
-                    if(!autoplay && !startSlot1 && !startSlot2 && !startSlot3 && !startSlot4 && !startSlot5){
-                        startSlot1 = true;
-                        startSlot2 = true;
-                        startSlot3 = true;
-                        startSlot4 = true;
-                        startSlot5 = true;
-                        autoplay = !autoplay;
+                    int currentBet = Integer.parseInt(txtBet.getText().toString());
+                    int currentBalance = Integer.parseInt(txtFreePlay.getText().toString());
+
+                    if(currentBet <= currentBalance){
+
+                        if(!autoplay && !startSlot1 && !startSlot2 && !startSlot3 && !startSlot4 && !startSlot5){
+                            startSlot1 = true;
+                            startSlot2 = true;
+                            startSlot3 = true;
+                            startSlot4 = true;
+                            startSlot5 = true;
+                            autoplay = !autoplay;
+
+                            txtBet.setFocusable(false);
+                            txtBet.setFocusableInTouchMode(false);
+                            txtBet.setInputType(TYPE_NULL);
+
+                            btnMaxBet.setClickable(false);
+                            btnSpin.setClickable(false);
+                        }
+                        else if(autoplay){
+                            autoplay = !autoplay;
+                        }
                     }
-                    else if(autoplay){
-                        autoplay = !autoplay;
+                    else {
+                        Toast.makeText(getActivity(),"Bet can't be more than freeplay!", Toast.LENGTH_SHORT).show();
                     }
                 }
             });
@@ -603,16 +680,6 @@ public class OfflineFlipperFragment extends Fragment{
         }
     }
 
-    private void initButtonUploadListener() {
-
-        btnUpload.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getActivity(),"File uploaded", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-
     private void initButtonSoundOnOffListener() {
 
         btnSoundOn.setOnClickListener(new View.OnClickListener() {
@@ -640,5 +707,19 @@ public class OfflineFlipperFragment extends Fragment{
                 btnSoundOn.setVisibility(View.VISIBLE);
             }
         });
+    }
+
+    public int repeatedNumber(final List<Integer> list) {
+
+        int count = 0;
+        Collections.sort(list);
+
+        for (int i = 0; i < list.size() - 1; i++) {
+            if (list.get(i) == list.get(i + 1)) {
+                count++;
+            }
+        }
+
+        return count;
     }
 }
