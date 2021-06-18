@@ -9,6 +9,8 @@
     <string name="win5">20202</string>
     <string name="win6">01010</string>
     <string name="win7">21112</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

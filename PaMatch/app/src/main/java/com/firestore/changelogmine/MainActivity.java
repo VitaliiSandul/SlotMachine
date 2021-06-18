@@ -50,6 +50,10 @@ public class MainActivity extends AppCompatActivity implements NetworkChangeRece
 
         hideNavigation();
 
+        fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.add(R.id.fragment_container, new LoadingFragment());
+        fragmentTransaction.commit();
+
         broadcastReceiver = new NetworkChangeReceiver();
         registerReceiver(broadcastReceiver, new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
         NetworkChangeReceiver.networkReceiverListener = this;
@@ -74,22 +78,16 @@ public class MainActivity extends AppCompatActivity implements NetworkChangeRece
 
     @Override
     public void onBackPressed() {
-        if (getSupportFragmentManager().findFragmentByTag("onlinetag") != null) {
-            if(OnlineFragment.mWebView.canGoBack() && web)
+        if (getSupportFragmentManager().findFragmentByTag("onlinetag") != null && web) {
+            if(OnlineFragment.mWebView.canGoBack()){
                 OnlineFragment.mWebView.goBack();
-            else if(!OnlineFragment.mWebView.canGoBack() && web){
+            }
+            else {
                 Fragment fr = new OnlineFragment(url);
                 fragmentTransaction = getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.fragment_container, fr, "onlinetag");
                 fragmentTransaction.commit();
                 Log.d("-----","Online");
-            }
-            else if(OnlineFragment.mWebView.canGoBack() && !web) {
-                Fragment fr = new OfflineFlipperFragment();
-                fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, fr, "offlinetag");
-                fragmentTransaction.commit();
-                Log.d("-----","Offline");
             }
         }
         else
@@ -127,13 +125,6 @@ public class MainActivity extends AppCompatActivity implements NetworkChangeRece
 
     @Override
     public void onNetworkConnectionChanged(Boolean isConnected) {
-        if (isConnected && web) {
-            Fragment fr = new OnlineFragment();
-            fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container, fr, "onlinetag");
-            fragmentTransaction.commit();
-            Log.d("-----","Online");
-        }
     }
 
     protected void ChooseFragment() {
