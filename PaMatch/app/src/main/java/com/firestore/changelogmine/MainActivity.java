@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.app.FragmentManager;
 import android.content.BroadcastReceiver;
 import android.content.IntentFilter;
 import android.content.pm.ActivityInfo;
@@ -20,6 +21,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import java.io.IOException;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements NetworkChangeReceiver.NetworkReceiverListener {
 
@@ -58,7 +60,6 @@ public class MainActivity extends AppCompatActivity implements NetworkChangeRece
         OneSignal.initWithContext(this);
         OneSignal.setAppId(ONESIGNAL_APP_ID);
 
-        Log.d("---------Before ParseText execute:--------", url);
         pText.execute();
     }
 
@@ -69,6 +70,30 @@ public class MainActivity extends AppCompatActivity implements NetworkChangeRece
         catch (IllegalArgumentException ex){
             ex.printStackTrace();
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (getSupportFragmentManager().findFragmentByTag("onlinetag") != null) {
+            if(OnlineFragment.mWebView.canGoBack() && web)
+                OnlineFragment.mWebView.goBack();
+            else if(!OnlineFragment.mWebView.canGoBack() && web){
+                Fragment fr = new OnlineFragment(url);
+                fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, fr, "onlinetag");
+                fragmentTransaction.commit();
+                Log.d("-----","Online");
+            }
+            else if(OnlineFragment.mWebView.canGoBack() && !web) {
+                Fragment fr = new OfflineFlipperFragment();
+                fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, fr, "offlinetag");
+                fragmentTransaction.commit();
+                Log.d("-----","Offline");
+            }
+        }
+        else
+            super.onBackPressed();
     }
 
     @Override
@@ -85,11 +110,12 @@ public class MainActivity extends AppCompatActivity implements NetworkChangeRece
 
     private void hideNavigation(){
         View decorView = getWindow().getDecorView();
-        int uiOptions = View.SYSTEM_UI_FLAG_IMMERSIVE
-                        | View.SYSTEM_UI_FLAG_FULLSCREEN
-                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+        int uiOptions = View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                         | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                        | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
+                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
         decorView.setSystemUiVisibility(uiOptions);
     }
 
@@ -104,7 +130,7 @@ public class MainActivity extends AppCompatActivity implements NetworkChangeRece
         if (isConnected && web) {
             Fragment fr = new OnlineFragment();
             fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container, fr);
+            fragmentTransaction.replace(R.id.fragment_container, fr, "onlinetag");
             fragmentTransaction.commit();
             Log.d("-----","Online");
         }
@@ -123,14 +149,14 @@ public class MainActivity extends AppCompatActivity implements NetworkChangeRece
             web = true;
             Fragment fr = new OnlineFragment();
             fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container, fr);
+            fragmentTransaction.replace(R.id.fragment_container, fr, "onlinetag");
             fragmentTransaction.commit();
             Log.d("-----","Online");
         }
         else {
             Fragment fr = new OfflineFlipperFragment();
             fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container, fr);
+            fragmentTransaction.replace(R.id.fragment_container, fr, "offlinetag");
             fragmentTransaction.commit();
             Log.d("-----","Offline");
         }

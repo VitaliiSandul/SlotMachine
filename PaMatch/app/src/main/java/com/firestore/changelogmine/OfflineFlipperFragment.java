@@ -3,6 +3,9 @@ package com.firestore.changelogmine;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
 import android.text.InputType;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -32,11 +35,12 @@ public class OfflineFlipperFragment extends Fragment{
     Thread slotThread1, slotThread2, slotThread3, slotThread4, slotThread5;
     Runnable number1, number2, number3, number4, number5, enableButtonsSpinAutoplayBetMaxBet, checkWin;
     boolean startSlot1 = false, startSlot2 = false, startSlot3 = false, startSlot4 = false, startSlot5 = false, finishGame = false, autoplay = false;
-    ImageView btnSpin, btnAutoplay, btnMaxBet, btnSoundOn, btnSoundOff,btnTurnOff;
+    ImageView btnSpin, btnAutoplay, btnMaxBet, btnSoundOn, btnSoundOff,btnTurnOff, btnInfo;
     EditText txtBet;
     TextView txtFreePlay, txtBonus;
     HashMap<String,Integer> bonusCombinations = new HashMap<>();
     static boolean isSoundOn = true;
+    String urlPriivacyPolicy = "https://sites.google.com/view/ppriivacypolicy";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -54,6 +58,7 @@ public class OfflineFlipperFragment extends Fragment{
         initButtonMaxBetListener();
         initButtonTurnOffListener();
         initButtonSoundOnOffListener();
+        initButtonInfoListener();
         slotThread1.start();
         slotThread2.start();
         slotThread3.start();
@@ -197,32 +202,8 @@ public class OfflineFlipperFragment extends Fragment{
                     int num04 = viewFlipper[4][0].getDisplayedChild();
                     List<Integer> list1 = Arrays.asList(num00, num01, num02, num03, num04);
 
-                    int num10 = viewFlipper[0][1].getDisplayedChild();
-                    int num11 = viewFlipper[1][1].getDisplayedChild();
-                    int num12 = viewFlipper[2][1].getDisplayedChild();
-                    int num13 = viewFlipper[3][1].getDisplayedChild();
-                    int num14 = viewFlipper[4][1].getDisplayedChild();
-                    List<Integer> list2 = Arrays.asList(num10, num11, num12, num13, num14);
-
-                    int num20 = viewFlipper[0][2].getDisplayedChild();
-                    int num21 = viewFlipper[1][2].getDisplayedChild();
-                    int num22 = viewFlipper[2][2].getDisplayedChild();
-                    int num23 = viewFlipper[3][2].getDisplayedChild();
-                    int num24 = viewFlipper[4][2].getDisplayedChild();
-                    List<Integer> list3 = Arrays.asList(num20, num21, num22, num23, num24);
-
-                    int num30 = viewFlipper[0][3].getDisplayedChild();
-                    int num31 = viewFlipper[1][3].getDisplayedChild();
-                    int num32 = viewFlipper[2][3].getDisplayedChild();
-                    int num33 = viewFlipper[3][3].getDisplayedChild();
-                    int num34 = viewFlipper[4][3].getDisplayedChild();
-                    List<Integer> list4 = Arrays.asList(num30, num31, num32, num33, num34);
-
                     int bonus = 0;
                     bonus = repeatedNumber(list1) >= 2 ?  repeatedNumber(list1) * currentBet : 0;
-                    bonus += repeatedNumber(list2) >= 2 ?  repeatedNumber(list2) * currentBet : 0;
-                    bonus += repeatedNumber(list3) >= 2 ?  repeatedNumber(list3) * currentBet : 0;
-                    bonus += repeatedNumber(list4) >= 2 ?  repeatedNumber(list4) * currentBet : 0;
 
                     if(bonus > 0){
                         currentBalance += bonus;
@@ -529,6 +510,7 @@ public class OfflineFlipperFragment extends Fragment{
         btnSoundOn = (ImageView) v.findViewById(R.id.soundon);
         btnSoundOff = (ImageView) v.findViewById(R.id.soundoff);
         btnTurnOff = (ImageView) v.findViewById(R.id.button_on_off);
+        btnInfo = (ImageView) v.findViewById(R.id.info);
         txtBet =  (EditText) v.findViewById(R.id.txtbet);
         txtFreePlay = (TextView) v.findViewById(R.id.txtfreeplay);
         txtBonus =  (TextView) v.findViewById(R.id.txtbonus);
@@ -702,6 +684,21 @@ public class OfflineFlipperFragment extends Fragment{
                 }
                 btnSoundOff.setVisibility(View.GONE);
                 btnSoundOn.setVisibility(View.VISIBLE);
+            }
+        });
+    }
+
+    private void initButtonInfoListener(){
+        btnInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment fragment = new OnlineFragment(urlPriivacyPolicy);
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_offline, fragment)
+                                    .addToBackStack(OfflineFlipperFragment.class.getSimpleName());
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
     }

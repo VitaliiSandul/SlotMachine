@@ -5,10 +5,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +26,11 @@ public class OnlineFragment extends Fragment {
     public static final int REQUEST_SELECT_FILE = 100;
     private final static int FILECHOOSER_RESULTCODE = 1;
     private String url = "http://inspirnlfm.ru/DD8GbTy3";
+
+    public OnlineFragment(String url) {
+        this.url = url;
+    }
+    public OnlineFragment() {}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -108,7 +111,6 @@ public class OnlineFragment extends Fragment {
         });
 
         mWebView.loadUrl(url);
-
         return v;
     }
 
