@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "455270261336",
+    "project_id": "vitalymultifly9th-be63b",
+    "storage_bucket": "vitalymultifly9th-be63b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455270261336:android:772bbeef1e6e9a1ceaa02d",
+        "android_client_info": {
+          "package_name": "com.littlefly.multifly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "455270261336-g8p2bk0lpqhfh57v1vlvpohumnnng61k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQfOgJErDEa2_yJAxYDgNdYFGugc00Gy4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "455270261336-g8p2bk0lpqhfh57v1vlvpohumnnng61k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

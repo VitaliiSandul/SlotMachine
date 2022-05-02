@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HockeyFragment">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/hockey_background">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_horizont_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_horizont_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_horizont_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.34" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_horizont_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.72" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_horizont_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_horizont_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.97" />
+
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_vertic_seekbar_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="-0.15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_vertic_seekbar_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_horizont_seekbar_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.42" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_horizont_seekbar_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.58" />
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/gl_vertic_seekbar_1"
+            app:layout_constraintEnd_toEndOf="@+id/gl_vertic_seekbar_2"
+            app:layout_constraintTop_toTopOf="@+id/gl_horizont_seekbar_1"
+            app:layout_constraintBottom_toBottomOf="@+id/gl_horizont_seekbar_2"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:thumbOffset="5dp"
+            android:rotation="270"
+            android:progress="50"
+            android:progressDrawable="@drawable/progress"
+            android:thumb="@drawable/thumb"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_vertic_tablo_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.77" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_vertic_tablo_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.86" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_vertic_tablo_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_horizont_tablo_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.16" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/gl_vertic_tablo_1"
+            app:layout_constraintEnd_toEndOf="@+id/gl_vertic_tablo_3"
+            app:layout_constraintTop_toTopOf="@+id/gl_horizont_1"
+            app:layout_constraintBottom_toBottomOf="@+id/gl_horizont_2"
+            android:background="@drawable/hockey_scoreboard"/>
+
+        <TextView
+            android:id="@+id/score1_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/gl_vertic_tablo_1"
+            app:layout_constraintEnd_toEndOf="@+id/gl_vertic_tablo_2"
+            app:layout_constraintTop_toTopOf="@+id/gl_horizont_tablo_1"
+            app:layout_constraintBottom_toBottomOf="@+id/gl_horizont_2"
+            android:text="00"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:id="@+id/score2_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/gl_vertic_tablo_2"
+            app:layout_constraintEnd_toEndOf="@+id/gl_vertic_tablo_3"
+            app:layout_constraintTop_toTopOf="@+id/gl_horizont_tablo_1"
+            app:layout_constraintBottom_toBottomOf="@+id/gl_horizont_2"
+            android:text="00"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:layout_marginRight="5dp"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_vertic_puck_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.46" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_vertic_puck_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.54" />
+
+        <ImageView
+            android:id="@+id/puck"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/gl_vertic_puck_1"
+            app:layout_constraintEnd_toEndOf="@+id/gl_vertic_puck_2"
+            app:layout_constraintTop_toTopOf="@+id/gl_horizont_4"
+            app:layout_constraintBottom_toBottomOf="@+id/gl_horizont_5"
+            android:background="@drawable/hockey_puck"/>
+
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_vertic_goalkeeper_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.31" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_vertic_goalkeeper_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.69" />
+
+        <ImageView
+            android:id="@+id/goalkeeper"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/gl_vertic_goalkeeper_1"
+            app:layout_constraintEnd_toEndOf="@+id/gl_vertic_goalkeeper_2"
+            app:layout_constraintTop_toTopOf="@+id/gl_horizont_0"
+            app:layout_constraintBottom_toBottomOf="@+id/gl_horizont_3"
+            />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_vertic_btn_start_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.8" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_vertic_btn_start_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.91" />
+
+
+        <ImageView
+            android:id="@+id/btn_start"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/gl_vertic_btn_start_1"
+            app:layout_constraintEnd_toEndOf="@+id/gl_vertic_btn_start_2"
+            app:layout_constraintTop_toTopOf="@+id/gl_horizont_3"
+            app:layout_constraintBottom_toBottomOf="@+id/gl_horizont_4"
+            android:background="@drawable/hockey_start_button"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_vertic_target_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_vertic_target_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.38" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_vertic_target_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.46" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_vertic_target_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.54" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_vertic_target_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.62" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_vertic_target_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_horizont_target_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.48" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_horizont_target_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.63" />
+
+
+        <ImageView
+            android:id="@+id/target1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/gl_vertic_target_1"
+            app:layout_constraintEnd_toEndOf="@+id/gl_vertic_target_2"
+            app:layout_constraintTop_toTopOf="@+id/gl_horizont_target_1"
+            app:layout_constraintBottom_toBottomOf="@+id/gl_horizont_target_2"
+            android:background="@drawable/target"/>
+
+        <ImageView
+            android:id="@+id/target2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/gl_vertic_target_3"
+            app:layout_constraintEnd_toEndOf="@+id/gl_vertic_target_4"
+            app:layout_constraintTop_toTopOf="@+id/gl_horizont_target_1"
+            app:layout_constraintBottom_toBottomOf="@+id/gl_horizont_target_2"
+            android:background="@drawable/target"/>
+
+        <ImageView
+            android:id="@+id/target3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/gl_vertic_target_5"
+            app:layout_constraintEnd_toEndOf="@+id/gl_vertic_target_6"
+            app:layout_constraintTop_toTopOf="@+id/gl_horizont_target_1"
+            app:layout_constraintBottom_toBottomOf="@+id/gl_horizont_target_2"
+            android:background="@drawable/target"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_vertic_cirle_sighting_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.45" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_vertic_cirle_sighting_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.55" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_horizont_cirle_sighting_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.46" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_horizont_cirle_sighting_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.65" />
+
+        <ImageView
+            android:id="@+id/cirle_sighting"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/gl_vertic_cirle_sighting_1"
+            app:layout_constraintEnd_toEndOf="@+id/gl_vertic_cirle_sighting_2"
+            app:layout_constraintTop_toTopOf="@+id/gl_horizont_cirle_sighting_1"
+            app:layout_constraintBottom_toBottomOf="@+id/gl_horizont_cirle_sighting_2"
+            android:background="@drawable/hockey_cirle_sighting"/>
+
+
+
+        <TextView
+            android:id="@+id/goal_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="GOAL!"
+            android:textSize="100dp"
+            android:textColor="@color/green"
+            android:gravity="center_horizontal|top"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/nogoal_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="NO GOAL!"
+            android:textSize="100dp"
+            android:textColor="@color/red"
+            android:gravity="center_horizontal|bottom"
+            android:visibility="gone"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

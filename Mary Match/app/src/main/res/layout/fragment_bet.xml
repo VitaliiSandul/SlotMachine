@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BetFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back_bet">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hbet_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hbet_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.42" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hbet_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.45" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hbet_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.57" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hbet_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.6" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hbet_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.72" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hbet_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.8" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hbet_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.92" />
+
+
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vbet_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.12" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vbet_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.34" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vbet_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.39" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vbet_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.61" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vbet_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.66" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vbet_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.88" />
+
+
+
+
+
+        <ImageButton
+            android:id="@+id/ok_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/vbet_3"
+            app:layout_constraintEnd_toEndOf="@+id/vbet_4"
+            app:layout_constraintTop_toTopOf="@+id/hbet_7"
+            app:layout_constraintBottom_toBottomOf="@+id/hbet_8"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/ok_button"/>
+
+        <ImageButton
+            android:id="@+id/close_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/close_button"/>
+
+
+        <ImageButton
+            android:id="@+id/pressed_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/vbet_1"
+            app:layout_constraintEnd_toEndOf="@+id/vbet_2"
+            app:layout_constraintTop_toTopOf="@+id/hbet_1"
+            app:layout_constraintBottom_toBottomOf="@+id/hbet_2"
+            android:background="@drawable/pressed_2"/>
+
+        <ImageButton
+            android:id="@+id/unpressed_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/vbet_1"
+            app:layout_constraintEnd_toEndOf="@+id/vbet_2"
+            app:layout_constraintTop_toTopOf="@+id/hbet_1"
+            app:layout_constraintBottom_toBottomOf="@+id/hbet_2"
+            android:background="@drawable/unpressed_2"
+            android:visibility="gone"/>
+
+
+        <ImageButton
+            android:id="@+id/pressed_5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/vbet_3"
+            app:layout_constraintEnd_toEndOf="@+id/vbet_4"
+            app:layout_constraintTop_toTopOf="@+id/hbet_1"
+            app:layout_constraintBottom_toBottomOf="@+id/hbet_2"
+            android:background="@drawable/pressed_5"
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/unpressed_5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/vbet_3"
+            app:layout_constraintEnd_toEndOf="@+id/vbet_4"
+            app:layout_constraintTop_toTopOf="@+id/hbet_1"
+            app:layout_constraintBottom_toBottomOf="@+id/hbet_2"
+            android:background="@drawable/unpressed_5"
+            />
+
+
+        <ImageButton
+            android:id="@+id/pressed_10"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/vbet_5"
+            app:layout_constraintEnd_toEndOf="@+id/vbet_6"
+            app:layout_constraintTop_toTopOf="@+id/hbet_1"
+            app:layout_constraintBottom_toBottomOf="@+id/hbet_2"
+            android:background="@drawable/pressed_10"
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/unpressed_10"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/vbet_5"
+            app:layout_constraintEnd_toEndOf="@+id/vbet_6"
+            app:layout_constraintTop_toTopOf="@+id/hbet_1"
+            app:layout_constraintBottom_toBottomOf="@+id/hbet_2"
+            android:background="@drawable/unpressed_10"
+            />
+
+
+
+
+
+        <ImageButton
+            android:id="@+id/pressed_20"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/vbet_1"
+            app:layout_constraintEnd_toEndOf="@+id/vbet_2"
+            app:layout_constraintTop_toTopOf="@+id/hbet_3"
+            app:layout_constraintBottom_toBottomOf="@+id/hbet_4"
+            android:background="@drawable/pressed_20"
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/unpressed_20"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/vbet_1"
+            app:layout_constraintEnd_toEndOf="@+id/vbet_2"
+            app:layout_constraintTop_toTopOf="@+id/hbet_3"
+            app:layout_constraintBottom_toBottomOf="@+id/hbet_4"
+            android:background="@drawable/unpressed_20"
+            />
+
+
+        <ImageButton
+            android:id="@+id/pressed_50"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/vbet_3"
+            app:layout_constraintEnd_toEndOf="@+id/vbet_4"
+            app:layout_constraintTop_toTopOf="@+id/hbet_3"
+            app:layout_constraintBottom_toBottomOf="@+id/hbet_4"
+            android:background="@drawable/pressed_50"
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/unpressed_50"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/vbet_3"
+            app:layout_constraintEnd_toEndOf="@+id/vbet_4"
+            app:layout_constraintTop_toTopOf="@+id/hbet_3"
+            app:layout_constraintBottom_toBottomOf="@+id/hbet_4"
+            android:background="@drawable/unpressed_50"
+            />
+
+
+        <ImageButton
+            android:id="@+id/pressed_100"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/vbet_5"
+            app:layout_constraintEnd_toEndOf="@+id/vbet_6"
+            app:layout_constraintTop_toTopOf="@+id/hbet_3"
+            app:layout_constraintBottom_toBottomOf="@+id/hbet_4"
+            android:background="@drawable/pressed_100"
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/unpressed_100"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/vbet_5"
+            app:layout_constraintEnd_toEndOf="@+id/vbet_6"
+            app:layout_constraintTop_toTopOf="@+id/hbet_3"
+            app:layout_constraintBottom_toBottomOf="@+id/hbet_4"
+            android:background="@drawable/unpressed_100"
+            />
+
+
+
+        <ImageButton
+            android:id="@+id/pressed_200"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/vbet_1"
+            app:layout_constraintEnd_toEndOf="@+id/vbet_2"
+            app:layout_constraintTop_toTopOf="@+id/hbet_5"
+            app:layout_constraintBottom_toBottomOf="@+id/hbet_6"
+            android:background="@drawable/pressed_200"
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/unpressed_200"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/vbet_1"
+            app:layout_constraintEnd_toEndOf="@+id/vbet_2"
+            app:layout_constraintTop_toTopOf="@+id/hbet_5"
+            app:layout_constraintBottom_toBottomOf="@+id/hbet_6"
+            android:background="@drawable/unpressed_200"
+            />
+
+
+        <ImageButton
+            android:id="@+id/pressed_500"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/vbet_3"
+            app:layout_constraintEnd_toEndOf="@+id/vbet_4"
+            app:layout_constraintTop_toTopOf="@+id/hbet_5"
+            app:layout_constraintBottom_toBottomOf="@+id/hbet_6"
+            android:background="@drawable/pressed_500"
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/unpressed_500"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/vbet_3"
+            app:layout_constraintEnd_toEndOf="@+id/vbet_4"
+            app:layout_constraintTop_toTopOf="@+id/hbet_5"
+            app:layout_constraintBottom_toBottomOf="@+id/hbet_6"
+            android:background="@drawable/unpressed_500"
+            />
+
+
+        <ImageButton
+            android:id="@+id/pressed_inf"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/vbet_5"
+            app:layout_constraintEnd_toEndOf="@+id/vbet_6"
+            app:layout_constraintTop_toTopOf="@+id/hbet_5"
+            app:layout_constraintBottom_toBottomOf="@+id/hbet_6"
+            android:background="@drawable/pressed_inf"
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/unpressed_inf"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/vbet_5"
+            app:layout_constraintEnd_toEndOf="@+id/vbet_6"
+            app:layout_constraintTop_toTopOf="@+id/hbet_5"
+            app:layout_constraintBottom_toBottomOf="@+id/hbet_6"
+            android:background="@drawable/unpressed_inf"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

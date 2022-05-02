@@ -1,0 +1,33 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/selected" android:oneshot="false">
+    <item android:drawable="@drawable/spinner00" android:duration="30" />
+    <item android:drawable="@drawable/spinner01" android:duration="30" />
+    <item android:drawable="@drawable/spinner02" android:duration="30" />
+    <item android:drawable="@drawable/spinner03" android:duration="30" />
+    <item android:drawable="@drawable/spinner04" android:duration="30" />
+    <item android:drawable="@drawable/spinner05" android:duration="30" />
+    <item android:drawable="@drawable/spinner06" android:duration="30" />
+    <item android:drawable="@drawable/spinner07" android:duration="30" />
+    <item android:drawable="@drawable/spinner08" android:duration="30" />
+    <item android:drawable="@drawable/spinner09" android:duration="30" />
+    <item android:drawable="@drawable/spinner10" android:duration="30" />
+    <item android:drawable="@drawable/spinner11" android:duration="30" />
+    <item android:drawable="@drawable/spinner12" android:duration="30" />
+    <item android:drawable="@drawable/spinner13" android:duration="30" />
+    <item android:drawable="@drawable/spinner14" android:duration="30" />
+    <item android:drawable="@drawable/spinner15" android:duration="30" />
+    <item android:drawable="@drawable/spinner16" android:duration="30" />
+    <item android:drawable="@drawable/spinner17" android:duration="30" />
+    <item android:drawable="@drawable/spinner18" android:duration="30" />
+    <item android:drawable="@drawable/spinner19" android:duration="30" />
+    <item android:drawable="@drawable/spinner20" android:duration="30" />
+    <item android:drawable="@drawable/spinner21" android:duration="30" />
+    <item android:drawable="@drawable/spinner22" android:duration="30" />
+    <item android:drawable="@drawable/spinner23" android:duration="30" />
+    <item android:drawable="@drawable/spinner24" android:duration="30" />
+    <item android:drawable="@drawable/spinner25" android:duration="30" />
+    <item android:drawable="@drawable/spinner26" android:duration="30" />
+    <item android:drawable="@drawable/spinner27" android:duration="30" />
+    <item android:drawable="@drawable/spinner28" android:duration="30" />
+    <item android:drawable="@drawable/spinner29" android:duration="30" />
+</animation-list>

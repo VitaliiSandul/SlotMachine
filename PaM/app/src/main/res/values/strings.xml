@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PaM</string>
+    <string name="facebook_app_id">238719534460575</string>
+    <string name="fb_login_protocol_scheme">fb238719534460575</string>
+</resources>

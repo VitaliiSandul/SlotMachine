@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "997007469157",
+    "project_id": "vitaliymonstersushi12th-eed59",
+    "storage_bucket": "vitaliymonstersushi12th-eed59.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:997007469157:android:1e7393453ec33f1e8b348c",
+        "android_client_info": {
+          "package_name": "com.sushimasters.monstergame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "997007469157-c5limuso4p6lb5jfd8520mqs7vvf14qi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-Fc6jKW-eze0Bg78aQycNPv1O9MdSwO8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "997007469157-c5limuso4p6lb5jfd8520mqs7vvf14qi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -462,7 +462,7 @@ public class OfflineFlipperFragment extends Fragment{
             int i;
 
             @Override
-            public void run() {
+                public void run() {
                 while (!finishGame) {
                     while (startSlot5) {
                         int currentBet = Integer.parseInt(txtBet.getText().toString());

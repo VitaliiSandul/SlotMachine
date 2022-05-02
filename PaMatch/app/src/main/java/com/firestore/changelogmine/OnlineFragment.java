@@ -42,13 +42,15 @@ public class OnlineFragment extends Fragment {
         mWebSettings.setJavaScriptEnabled(true);
         mWebSettings.setSupportZoom(false);
         mWebSettings.setAllowFileAccess(true);
-        mWebSettings.setAllowFileAccess(true);
+        //mWebSettings.setAllowFileAccess(true);
         mWebSettings.setAllowContentAccess(true);
 
         mWebView.setWebViewClient(new WebViewClient());
         mWebView.setWebChromeClient(new WebChromeClient());
+
         CookieSyncManager.createInstance(mWebView.getContext());
         CookieSyncManager.getInstance().sync();
+
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.getSettings().setDomStorageEnabled(true);
         mWebView.requestFocus(View.FOCUS_DOWN);

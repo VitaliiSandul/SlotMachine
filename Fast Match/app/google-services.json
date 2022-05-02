@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "690947971858",
+    "project_id": "vitalyluckyfortunecat5th-b1b76",
+    "storage_bucket": "vitalyluckyfortunecat5th-b1b76.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690947971858:android:af828c623a4dc72b24b1cb",
+        "android_client_info": {
+          "package_name": "com.belucky.fortunecat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "690947971858-1am659paq0otasn526lkj81580g2tqba.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBESnMB0oIBMS4T9Y1DHjGOeW0ahyDTZSw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "690947971858-1am659paq0otasn526lkj81580g2tqba.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

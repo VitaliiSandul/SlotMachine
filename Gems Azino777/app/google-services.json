@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "745082087869",
+    "project_id": "vitalygemswild10th-6a190",
+    "storage_bucket": "vitalygemswild10th-6a190.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745082087869:android:32d32e68644306c512cad4",
+        "android_client_info": {
+          "package_name": "com.gems.wild"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745082087869-hlnjctebftsothmhfhk5o8k2r5emipc3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC5kGreiJs_rFkik1QJyI-MMElZpE-xKc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745082087869-hlnjctebftsothmhfhk5o8k2r5emipc3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

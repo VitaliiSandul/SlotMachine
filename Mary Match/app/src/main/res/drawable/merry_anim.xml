@@ -1,0 +1,33 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/selected" android:oneshot="false">
+    <item android:drawable="@drawable/merry_00" android:duration="50" />
+    <item android:drawable="@drawable/merry_01" android:duration="50" />
+    <item android:drawable="@drawable/merry_02" android:duration="50" />
+    <item android:drawable="@drawable/merry_03" android:duration="50" />
+    <item android:drawable="@drawable/merry_04" android:duration="50" />
+    <item android:drawable="@drawable/merry_05" android:duration="50" />
+    <item android:drawable="@drawable/merry_06" android:duration="50" />
+    <item android:drawable="@drawable/merry_07" android:duration="50" />
+    <item android:drawable="@drawable/merry_08" android:duration="50" />
+    <item android:drawable="@drawable/merry_09" android:duration="50" />
+    <item android:drawable="@drawable/merry_10" android:duration="50" />
+    <item android:drawable="@drawable/merry_11" android:duration="50" />
+    <item android:drawable="@drawable/merry_12" android:duration="50" />
+    <item android:drawable="@drawable/merry_13" android:duration="50" />
+    <item android:drawable="@drawable/merry_14" android:duration="50" />
+    <item android:drawable="@drawable/merry_15" android:duration="50" />
+    <item android:drawable="@drawable/merry_16" android:duration="50" />
+    <item android:drawable="@drawable/merry_17" android:duration="50" />
+    <item android:drawable="@drawable/merry_18" android:duration="50" />
+    <item android:drawable="@drawable/merry_19" android:duration="50" />
+    <item android:drawable="@drawable/merry_20" android:duration="50" />
+    <item android:drawable="@drawable/merry_21" android:duration="50" />
+    <item android:drawable="@drawable/merry_22" android:duration="50" />
+    <item android:drawable="@drawable/merry_23" android:duration="50" />
+    <item android:drawable="@drawable/merry_24" android:duration="50" />
+    <item android:drawable="@drawable/merry_25" android:duration="50" />
+    <item android:drawable="@drawable/merry_26" android:duration="50" />
+    <item android:drawable="@drawable/merry_27" android:duration="50" />
+    <item android:drawable="@drawable/merry_28" android:duration="50" />
+    <item android:drawable="@drawable/merry_29" android:duration="50" />
+</animation-list>

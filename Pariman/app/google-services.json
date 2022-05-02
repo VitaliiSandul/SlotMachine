@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "90009893948",
+    "project_id": "vitaliygoldstar6th-e39bd",
+    "storage_bucket": "vitaliygoldstar6th-e39bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:90009893948:android:3873a669f10077c4f41739",
+        "android_client_info": {
+          "package_name": "com.goldengold.stargame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "90009893948-c6mrs0q7k25i2h3i6ktv729quvjf0tee.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPSARLEh0vXRKsY5nhqlDyhCZV-PPDvnA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "90009893948-c6mrs0q7k25i2h3i6ktv729quvjf0tee.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

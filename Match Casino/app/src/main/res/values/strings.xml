@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Match Casino</string>
+    <string name="facebook_app_id">242213664066474</string>
+    <string name="fb_login_protocol_scheme">fb242213664066474</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

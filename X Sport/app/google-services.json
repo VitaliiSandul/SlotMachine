@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "468399422104",
+    "project_id": "vitaliyfootball8th-18e9e",
+    "storage_bucket": "vitaliyfootball8th-18e9e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468399422104:android:db52b45fa3764ae053eeed",
+        "android_client_info": {
+          "package_name": "com.myfavoritegame.football"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "468399422104-9v2dss6236oohgrfe92r0o6efejso4n4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUSb9DshvTjFZO77y59oob9R2wiHxNbQU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "468399422104-9v2dss6236oohgrfe92r0o6efejso4n4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

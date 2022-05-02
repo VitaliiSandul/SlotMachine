@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".GemsFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hor1_gems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ver1_gems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ver2_gems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@+id/ver1_gems"
+        app:layout_constraintEnd_toEndOf="@+id/ver2_gems"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/hor1_gems"
+        android:background="@drawable/gems_wild_1">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ver1_slots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.075" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ver2_slots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.245" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ver3_slots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.415" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ver4_slots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.585" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ver5_slots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.755" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hor1_slots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hor2_slots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.34" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hor3_slots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.58" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hor4_slots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.82" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ver6_slots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.925" />
+
+
+
+
+        <ViewFlipper
+            android:id="@+id/gems_00"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/ver1_slots"
+            app:layout_constraintEnd_toEndOf="@+id/ver2_slots"
+            app:layout_constraintTop_toTopOf="@+id/hor1_slots"
+            app:layout_constraintBottom_toBottomOf="@+id/hor2_slots" />
+
+        <ViewFlipper
+            android:id="@+id/gems_10"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/ver1_slots"
+            app:layout_constraintEnd_toEndOf="@+id/ver2_slots"
+            app:layout_constraintTop_toTopOf="@+id/hor2_slots"
+            app:layout_constraintBottom_toBottomOf="@+id/hor3_slots" />
+
+        <ViewFlipper
+            android:id="@+id/gems_20"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/ver1_slots"
+            app:layout_constraintEnd_toEndOf="@+id/ver2_slots"
+            app:layout_constraintTop_toTopOf="@+id/hor3_slots"
+            app:layout_constraintBottom_toBottomOf="@+id/hor4_slots" />
+
+
+
+        <ViewFlipper
+            android:id="@+id/gems_01"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/ver2_slots"
+            app:layout_constraintEnd_toEndOf="@+id/ver3_slots"
+            app:layout_constraintTop_toTopOf="@+id/hor1_slots"
+            app:layout_constraintBottom_toBottomOf="@+id/hor2_slots" />
+
+        <ViewFlipper
+            android:id="@+id/gems_11"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/ver2_slots"
+            app:layout_constraintEnd_toEndOf="@+id/ver3_slots"
+            app:layout_constraintTop_toTopOf="@+id/hor2_slots"
+            app:layout_constraintBottom_toBottomOf="@+id/hor3_slots" />
+
+        <ViewFlipper
+            android:id="@+id/gems_21"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/ver2_slots"
+            app:layout_constraintEnd_toEndOf="@+id/ver3_slots"
+            app:layout_constraintTop_toTopOf="@+id/hor3_slots"
+            app:layout_constraintBottom_toBottomOf="@+id/hor4_slots" />
+
+
+
+        <ViewFlipper
+            android:id="@+id/gems_02"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/ver3_slots"
+            app:layout_constraintEnd_toEndOf="@+id/ver4_slots"
+            app:layout_constraintTop_toTopOf="@+id/hor1_slots"
+            app:layout_constraintBottom_toBottomOf="@+id/hor2_slots" />
+
+        <ViewFlipper
+            android:id="@+id/gems_12"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/ver3_slots"
+            app:layout_constraintEnd_toEndOf="@+id/ver4_slots"
+            app:layout_constraintTop_toTopOf="@+id/hor2_slots"
+            app:layout_constraintBottom_toBottomOf="@+id/hor3_slots" />
+
+        <ViewFlipper
+            android:id="@+id/gems_22"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/ver3_slots"
+            app:layout_constraintEnd_toEndOf="@+id/ver4_slots"
+            app:layout_constraintTop_toTopOf="@+id/hor3_slots"
+            app:layout_constraintBottom_toBottomOf="@+id/hor4_slots" />
+
+
+
+        <ViewFlipper
+            android:id="@+id/gems_03"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/ver4_slots"
+            app:layout_constraintEnd_toEndOf="@+id/ver5_slots"
+            app:layout_constraintTop_toTopOf="@+id/hor1_slots"
+            app:layout_constraintBottom_toBottomOf="@+id/hor2_slots" />
+
+        <ViewFlipper
+            android:id="@+id/gems_13"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/ver4_slots"
+            app:layout_constraintEnd_toEndOf="@+id/ver5_slots"
+            app:layout_constraintTop_toTopOf="@+id/hor2_slots"
+            app:layout_constraintBottom_toBottomOf="@+id/hor3_slots" />
+
+        <ViewFlipper
+            android:id="@+id/gems_23"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/ver4_slots"
+            app:layout_constraintEnd_toEndOf="@+id/ver5_slots"
+            app:layout_constraintTop_toTopOf="@+id/hor3_slots"
+            app:layout_constraintBottom_toBottomOf="@+id/hor4_slots" />
+
+
+
+        <ViewFlipper
+            android:id="@+id/gems_04"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/ver5_slots"
+            app:layout_constraintEnd_toEndOf="@+id/ver6_slots"
+            app:layout_constraintTop_toTopOf="@+id/hor1_slots"
+            app:layout_constraintBottom_toBottomOf="@+id/hor2_slots" />
+
+        <ViewFlipper
+            android:id="@+id/gems_14"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/ver5_slots"
+            app:layout_constraintEnd_toEndOf="@+id/ver6_slots"
+            app:layout_constraintTop_toTopOf="@+id/hor2_slots"
+            app:layout_constraintBottom_toBottomOf="@+id/hor3_slots" />
+
+        <ViewFlipper
+            android:id="@+id/gems_24"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/ver5_slots"
+            app:layout_constraintEnd_toEndOf="@+id/ver6_slots"
+            app:layout_constraintTop_toTopOf="@+id/hor3_slots"
+            app:layout_constraintBottom_toBottomOf="@+id/hor4_slots" />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ver1_gems_wild2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.335" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ver2_gems_wild2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.655" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hor1_gems_wild2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.125" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/ver1_gems_wild2"
+            app:layout_constraintEnd_toEndOf="@+id/ver2_gems_wild2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/hor1_gems_wild2"
+            android:background="@drawable/gems_wild_2"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hor1_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.87" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hor2_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.96" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hor3_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.785" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ver1_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.07" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ver2_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.12" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ver3_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.18" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ver4_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.28" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ver5_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ver6_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ver7_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.6" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ver8_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ver9_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.72" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ver10_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.82" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ver11_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.85" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ver12_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+
+        <ImageButton
+            android:id="@+id/info"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/ver1_btn"
+            app:layout_constraintEnd_toEndOf="@+id/ver2_btn"
+            app:layout_constraintTop_toTopOf="@+id/hor1_btn"
+            app:layout_constraintBottom_toBottomOf="@+id/hor2_btn"
+            android:background="@drawable/info"/>
+
+        <ImageView
+            android:id="@+id/balance"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/ver3_btn"
+            app:layout_constraintEnd_toEndOf="@+id/ver4_btn"
+            app:layout_constraintTop_toTopOf="@+id/hor1_btn"
+            app:layout_constraintBottom_toBottomOf="@+id/hor2_btn"
+            android:background="@drawable/balance"/>
+
+        <TextView
+            android:id="@+id/balance_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@+id/balance"
+            app:layout_constraintBottom_toBottomOf="@+id/balance"
+            app:layout_constraintStart_toStartOf="@+id/balance"
+            app:layout_constraintEnd_toEndOf="@+id/balance"
+            android:textStyle="bold"
+            android:textSize="10dp"
+            android:text="1000.00"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="10dp"
+            android:textColor="#ffffff"/>
+
+        <ImageButton
+            android:id="@+id/auto"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/ver5_btn"
+            app:layout_constraintEnd_toEndOf="@+id/ver6_btn"
+            app:layout_constraintTop_toTopOf="@+id/hor1_btn"
+            app:layout_constraintBottom_toBottomOf="@+id/hor2_btn"
+            android:background="@drawable/auto"/>
+
+        <ImageView
+            android:id="@+id/bonus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/ver7_btn"
+            app:layout_constraintEnd_toEndOf="@+id/ver8_btn"
+            app:layout_constraintTop_toTopOf="@+id/hor1_btn"
+            app:layout_constraintBottom_toBottomOf="@+id/hor2_btn"
+            android:background="@drawable/bonus"/>
+
+        <TextView
+            android:id="@+id/bonus_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@+id/bonus"
+            app:layout_constraintBottom_toBottomOf="@+id/bonus"
+            app:layout_constraintStart_toStartOf="@+id/bonus"
+            app:layout_constraintEnd_toEndOf="@+id/bonus"
+            android:textStyle="bold"
+            android:textSize="10dp"
+            android:text="0.00"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="10dp"
+            android:textColor="#ffffff"/>
+
+        <ImageView
+            android:id="@+id/bet"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/ver9_btn"
+            app:layout_constraintEnd_toEndOf="@+id/ver10_btn"
+            app:layout_constraintTop_toTopOf="@+id/hor1_btn"
+            app:layout_constraintBottom_toBottomOf="@+id/hor2_btn"
+            android:background="@drawable/bet"/>
+
+
+        <EditText
+            android:id="@+id/bet_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@+id/bet"
+            app:layout_constraintBottom_toBottomOf="@+id/bet"
+            app:layout_constraintStart_toStartOf="@+id/bet"
+            app:layout_constraintEnd_toEndOf="@+id/bet"
+            android:inputType="numberDecimal"
+            android:digits="0123456789."
+            android:ellipsize="start"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="10dp"
+            android:hint="Enter your bet"
+            android:textStyle="bold"
+            android:textSize="10dp"
+            android:text="2.00"
+            android:textColor="#ffffff"
+            android:singleLine="true"
+            android:background="@null"/>
+
+        <ImageButton
+            android:id="@+id/spin"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/ver11_btn"
+            app:layout_constraintEnd_toEndOf="@+id/ver12_btn"
+            app:layout_constraintTop_toTopOf="@+id/hor3_btn"
+            app:layout_constraintBottom_toBottomOf="@+id/hor2_btn"
+            android:background="@drawable/spin"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

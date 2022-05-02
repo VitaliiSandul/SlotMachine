@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "122895048505",
+    "project_id": "vitalyhockey11th-56077",
+    "storage_bucket": "vitalyhockey11th-56077.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:122895048505:android:3de58ced94b57bae1d52e8",
+        "android_client_info": {
+          "package_name": "com.blackpuck.icehockey"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "122895048505-97rh2kad5kk7955hsuqk57e41aqnh3rd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6Rt2E1OvMiF9nfWpROpInccWgiMlCYkc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "122895048505-97rh2kad5kk7955hsuqk57e41aqnh3rd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

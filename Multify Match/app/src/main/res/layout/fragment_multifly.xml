@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MultiflyFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glh1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.057" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glh2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.3047" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glh3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5524" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glh4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.8" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glh5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.885" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glh6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.905" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glh7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.965" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glh8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.985" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv1_slot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.24" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv2_slot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.345" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv3_slot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.45" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv4_slot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.555" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv5_slot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.66" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv6_slot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.765" />
+
+        <ViewFlipper
+            android:id="@+id/img_fly_00"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/glv1_slot"
+            app:layout_constraintEnd_toEndOf="@+id/glv2_slot"
+            app:layout_constraintTop_toTopOf="@+id/glh1"
+            app:layout_constraintBottom_toBottomOf="@+id/glh2" />
+
+        <ViewFlipper
+            android:id="@+id/img_fly_01"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/glv2_slot"
+            app:layout_constraintEnd_toEndOf="@+id/glv3_slot"
+            app:layout_constraintTop_toTopOf="@+id/glh1"
+            app:layout_constraintBottom_toBottomOf="@+id/glh2" />
+
+        <ViewFlipper
+            android:id="@+id/img_fly_02"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/glv3_slot"
+            app:layout_constraintEnd_toEndOf="@+id/glv4_slot"
+            app:layout_constraintTop_toTopOf="@+id/glh1"
+            app:layout_constraintBottom_toBottomOf="@+id/glh2" />
+
+        <ViewFlipper
+            android:id="@+id/img_fly_03"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/glv4_slot"
+            app:layout_constraintEnd_toEndOf="@+id/glv5_slot"
+            app:layout_constraintTop_toTopOf="@+id/glh1"
+            app:layout_constraintBottom_toBottomOf="@+id/glh2" />
+
+        <ViewFlipper
+            android:id="@+id/img_fly_04"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/glv5_slot"
+            app:layout_constraintEnd_toEndOf="@+id/glv6_slot"
+            app:layout_constraintTop_toTopOf="@+id/glh1"
+            app:layout_constraintBottom_toBottomOf="@+id/glh2" />
+
+
+
+        <ViewFlipper
+            android:id="@+id/img_fly_10"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/glv1_slot"
+            app:layout_constraintEnd_toEndOf="@+id/glv2_slot"
+            app:layout_constraintTop_toTopOf="@+id/glh2"
+            app:layout_constraintBottom_toBottomOf="@+id/glh3" />
+
+        <ViewFlipper
+            android:id="@+id/img_fly_11"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/glv2_slot"
+            app:layout_constraintEnd_toEndOf="@+id/glv3_slot"
+            app:layout_constraintTop_toTopOf="@+id/glh2"
+            app:layout_constraintBottom_toBottomOf="@+id/glh3" />
+
+        <ViewFlipper
+            android:id="@+id/img_fly_12"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/glv3_slot"
+            app:layout_constraintEnd_toEndOf="@+id/glv4_slot"
+            app:layout_constraintTop_toTopOf="@+id/glh2"
+            app:layout_constraintBottom_toBottomOf="@+id/glh3" />
+
+        <ViewFlipper
+            android:id="@+id/img_fly_13"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/glv4_slot"
+            app:layout_constraintEnd_toEndOf="@+id/glv5_slot"
+            app:layout_constraintTop_toTopOf="@+id/glh2"
+            app:layout_constraintBottom_toBottomOf="@+id/glh3" />
+
+        <ViewFlipper
+            android:id="@+id/img_fly_14"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/glv5_slot"
+            app:layout_constraintEnd_toEndOf="@+id/glv6_slot"
+            app:layout_constraintTop_toTopOf="@+id/glh2"
+            app:layout_constraintBottom_toBottomOf="@+id/glh3" />
+
+
+        <ViewFlipper
+            android:id="@+id/img_fly_20"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/glv1_slot"
+            app:layout_constraintEnd_toEndOf="@+id/glv2_slot"
+            app:layout_constraintTop_toTopOf="@+id/glh3"
+            app:layout_constraintBottom_toBottomOf="@+id/glh4" />
+
+        <ViewFlipper
+            android:id="@+id/img_fly_21"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/glv2_slot"
+            app:layout_constraintEnd_toEndOf="@+id/glv3_slot"
+            app:layout_constraintTop_toTopOf="@+id/glh3"
+            app:layout_constraintBottom_toBottomOf="@+id/glh4" />
+
+        <ViewFlipper
+            android:id="@+id/img_fly_22"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/glv3_slot"
+            app:layout_constraintEnd_toEndOf="@+id/glv4_slot"
+            app:layout_constraintTop_toTopOf="@+id/glh3"
+            app:layout_constraintBottom_toBottomOf="@+id/glh4" />
+
+        <ViewFlipper
+            android:id="@+id/img_fly_23"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/glv4_slot"
+            app:layout_constraintEnd_toEndOf="@+id/glv5_slot"
+            app:layout_constraintTop_toTopOf="@+id/glh3"
+            app:layout_constraintBottom_toBottomOf="@+id/glh4" />
+
+        <ViewFlipper
+            android:id="@+id/img_fly_24"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/glv5_slot"
+            app:layout_constraintEnd_toEndOf="@+id/glv6_slot"
+            app:layout_constraintTop_toTopOf="@+id/glh3"
+            app:layout_constraintBottom_toBottomOf="@+id/glh4" />
+
+
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.03" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.057" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.193" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.22" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.227" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.323" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.365" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.425" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.435" />
+
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.57" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.58" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.64" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.673" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.77" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.805" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.94" />
+
+
+        <ImageButton
+            android:id="@+id/minus_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/glv1"
+            app:layout_constraintEnd_toEndOf="@+id/glv2"
+            app:layout_constraintTop_toTopOf="@+id/glh6"
+            app:layout_constraintBottom_toBottomOf="@+id/glh7"
+            android:background="@drawable/minus_button"
+            android:contentDescription="decrease the bet"
+            />
+
+        <ImageButton
+            android:id="@+id/plus_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/glv3"
+            app:layout_constraintEnd_toEndOf="@+id/glv4"
+            app:layout_constraintTop_toTopOf="@+id/glh6"
+            app:layout_constraintBottom_toBottomOf="@+id/glh7"
+            android:background="@drawable/plus_button"
+            android:contentDescription="increase the bet"
+            />
+
+        <ImageButton
+            android:id="@+id/max_bet_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/glv7"
+            app:layout_constraintEnd_toEndOf="@+id/glv9"
+            app:layout_constraintTop_toTopOf="@+id/glh5"
+            app:layout_constraintBottom_toBottomOf="@+id/glh8"
+            android:background="@drawable/max_bet_button"
+            android:contentDescription="set max bet"
+            />
+
+
+        <ImageButton
+            android:id="@+id/spin_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/glv8"
+            app:layout_constraintEnd_toEndOf="@+id/glv11"
+            app:layout_constraintTop_toTopOf="@+id/glh5"
+            app:layout_constraintBottom_toBottomOf="@+id/glh8"
+            android:background="@drawable/spin_button"
+            android:contentDescription="spin slots"
+            />
+
+        <ImageButton
+            android:id="@+id/stop_auto_game_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/glv10"
+            app:layout_constraintEnd_toEndOf="@+id/glv12"
+            app:layout_constraintTop_toTopOf="@+id/glh5"
+            app:layout_constraintBottom_toBottomOf="@+id/glh8"
+            android:background="@drawable/stop_auto_game_button"
+            android:contentDescription="button stop auto game"
+            />
+
+        <ImageButton
+            android:id="@+id/auto_game_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/glv10"
+            app:layout_constraintEnd_toEndOf="@+id/glv12"
+            app:layout_constraintTop_toTopOf="@+id/glh5"
+            app:layout_constraintBottom_toBottomOf="@+id/glh8"
+            android:background="@drawable/auto_game_button"
+            android:contentDescription="button start auto game"
+            />
+
+        <TextView
+            android:id="@+id/bet_txt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@+id/glh6"
+            app:layout_constraintBottom_toBottomOf="@+id/glh7"
+            app:layout_constraintStart_toStartOf="@+id/glv2"
+            app:layout_constraintEnd_toEndOf="@+id/glv3"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:text="0.50"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#fbe42d"/>
+
+
+
+        <TextView
+            android:id="@+id/free_spins_txt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@+id/glh6"
+            app:layout_constraintBottom_toBottomOf="@+id/glh7"
+            app:layout_constraintStart_toStartOf="@+id/glv5"
+            app:layout_constraintEnd_toEndOf="@+id/glv6"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:text="3"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#fbe42d"/>
+
+        <TextView
+            android:id="@+id/win_txt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@+id/glh6"
+            app:layout_constraintBottom_toBottomOf="@+id/glh7"
+            app:layout_constraintStart_toStartOf="@+id/glv13"
+            app:layout_constraintEnd_toEndOf="@+id/glv14"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:text="0.00"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#fbe42d"/>
+
+
+        <TextView
+            android:id="@+id/balance_txt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@+id/glh6"
+            app:layout_constraintBottom_toBottomOf="@+id/glh7"
+            app:layout_constraintStart_toStartOf="@+id/glv15"
+            app:layout_constraintEnd_toEndOf="@+id/glv16"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:text="100.00"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#fbe42d"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glh1_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glh2_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv1_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.88" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv2_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <ImageButton
+            android:id="@+id/info_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/glv1_info"
+            app:layout_constraintEnd_toEndOf="@+id/glv2_info"
+            app:layout_constraintTop_toTopOf="@+id/glh1_info"
+            app:layout_constraintBottom_toBottomOf="@+id/glh2_info"
+            android:background="@drawable/info_button"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:contentDescription="button info"
+            />
+
+        <ImageView
+            android:id="@+id/free_spin_img"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/glv1_slot"
+            app:layout_constraintEnd_toEndOf="@+id/glv6_slot"
+            app:layout_constraintTop_toTopOf="@+id/glh1"
+            app:layout_constraintBottom_toBottomOf="@+id/glh4"
+            android:src="@drawable/free_spin"
+            android:visibility="gone"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

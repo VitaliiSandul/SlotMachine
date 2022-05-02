@@ -1,0 +1,11 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/selected" android:oneshot="false">
+    <item android:drawable="@drawable/loading_0" android:duration="40" />
+    <item android:drawable="@drawable/loading_1" android:duration="80" />
+    <item android:drawable="@drawable/loading_2" android:duration="120" />
+    <item android:drawable="@drawable/loading_3" android:duration="160" />
+    <item android:drawable="@drawable/loading_4" android:duration="200" />
+    <item android:drawable="@drawable/loading_5" android:duration="240" />
+    <item android:drawable="@drawable/loading_6" android:duration="280" />
+    <item android:drawable="@drawable/loading_7" android:duration="320" />
+</animation-list>
